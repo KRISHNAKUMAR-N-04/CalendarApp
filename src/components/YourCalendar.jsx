@@ -45,67 +45,68 @@ const Calendar = () => {
   const calendar = generateCalendar();
 
   return (
-    <div className="bg-gray-100 min-h-screen p-4 font-quicksand">
-      <EventNotification events={events} today={today} />
-
-      
-
-      <div className="pt-5  max-w-6xl mx-auto">
-      <div
-        className="flex justify-end pt-2 md:pt-3 md:pb-3 "
-      >
-        <div className="flex items-center bg-gray-900 hover:bg-blue-600 transition-all hover:-translate-y-1 duration-300 text-white px-4 py-1 rounded-md cursor-pointer" onClick={() => navigate('/editevent')}>
-          <PlusIcon size={20} className="mr-2" />
-          <p>Add Event</p>
-        </div>
-      </div>
-        <div className="flex justify-between items-center mb-4">
-          <button
-            className="bg-gray-200 rounded px-4 py-2"
-            onClick={() => setSelectedDate(selectedDate.subtract(1, 'month'))}
-          >
-            <MoveLeftIcon size={20} />
-          </button>
-          <h2 className="text-xl font-bold">
-            {selectedDate.format('MMMM YYYY')}
-          </h2>
-          <button
-            className="bg-gray-200 rounded px-4 py-2"
-            onClick={() => setSelectedDate(selectedDate.add(1, 'month'))}
-          >
-            <MoveRightIcon size={20} />
-          </button>
+    <div className="lg:ml-64 lg:pb-25 lg:pt-10 lg:max-w-screen">
+      <div className="bg-white/20 backdrop-blur-lg p-4 font-quicksand flex flex-col lg:flex-row shadow-white rounded-lg gap-4">
+        <div className="w-full lg:w-1/3 ml-4 ">
+          <EventNotification events={events} today={today} />
         </div>
 
-        <div className="overflow-x-auto">
-          <div className="min-w-[700px]">
-            <div className="grid grid-cols-7 text-center font-semibold mb-2">
-              {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
-                <div key={d}>{d}</div>
-              ))}
+        <div className="w-full pt-4 pb-5 bg-white/40 rounded-lg px-4 lg:flex-1">
+          <div className='flex h-10 justify-between content-center mb-3'>
+            <p className="text-3xl md:text-4xl text-white font-bold mb-4">Calendar</p>
+            <div
+              className="flex items-center shadow-white bg-gray-900 hover:bg-blue-600 transition hover:-translate-y-1 duration-300 text-white px-4 py-2 rounded-md cursor-pointer"
+              onClick={() => navigate('/editevent')}
+            >
+              <PlusIcon size={20} className="mr-2" />
+              <p>Add Event</p>
             </div>
+          </div>
 
-            <div className="space-y-3">
-              {calendar.map((week, weekIdx) => (
-                <div key={weekIdx} className="grid grid-cols-7  gap-3">
-                  {week.map((cell, idx) => (
-                    <div
-                      key={idx}
-                      className={`border p-2 h-25 overflow-y-hidden rounded-md transition-transform duration-300 hover:-translate-y-1 ${cell.date.isSame(today, 'day')
-                          ? 'bg-blue-100 border-blue-500'
-                          : ''
-                        }`}
-                    >
-                      <div className="text-sm font-bold">
-                        {cell.date.date()}
+          <div className="flex justify-between items-center bg-amber-50 text-black px-4 py-2 rounded-md shadow">
+            <button
+              className="bg-gray-200 rounded px-4 py-2"
+              onClick={() => setSelectedDate(selectedDate.subtract(1, 'month'))}
+            >
+              <MoveLeftIcon size={20} />
+            </button>
+            <h2 className="text-lg md:text-xl font-bold">
+              {selectedDate.format('MMMM YYYY')}
+            </h2>
+            <button
+              className="bg-gray-200 rounded px-4 py-2"
+              onClick={() => setSelectedDate(selectedDate.add(1, 'month'))}
+            >
+              <MoveRightIcon size={20} />
+            </button>
+          </div>
+
+          <div className="overflow-x-auto mt-4 rounded-lg">
+            <div className="min-w-[900px]">
+              <div className="grid grid-cols-7 bg-blue-900 text-orange-400 text-center font-semibold">
+                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
+                  <div key={d} className="py-2">{d}</div>
+                ))}
+              </div>
+
+              <div>
+                {calendar.map((week, weekIdx) => (
+                  <div key={weekIdx} className="grid grid-cols-7 bg-amber-50">
+                    {week.map((cell, idx) => (
+                      <div
+                        key={idx}
+                        className={`border border-gray-300 p-2 h-15 sm:h-32 md:h-25 overflow-hidden text-sm transition-transform duration-300 hover:-translate-y-1 
+                          ${cell.date.isSame(today, 'day') ? 'bg-orange-100 border-orange-500 rounded-md' : ''}`}
+                      >
+                        <div className="font-bold mb-1">{cell.date.date()}</div>
+                        {cell.events.map((e, i) => (
+                          <EventCard key={i} event={e} />
+                        ))}
                       </div>
-                      {cell.events.map((e, i) => (
-                        <EventCard key={i} event={e} />
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              ))}
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
