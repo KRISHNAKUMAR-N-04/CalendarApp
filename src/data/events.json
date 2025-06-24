@@ -1,26 +1,65 @@
 [
-    {
-      "title": "Team Meeting",
-      "date": "2025-06-24",
-      "Start_time": "10:00 AM",
-      "End_time": "12:00 PM",
-      "color": "#4ADE80 "
-
-    },
-    {
-      "title": "Doctor Appointment",
-      "date": "2025-06-24",
-      "Start_time": "02:00 PM",
-      "End_time": "2:30 PM",
-      "color": "#60A5FA "
-
-    },
-    {
-      "title": "Project Deadline",
-      "date": "2025-06-26",
-      "Start_time": "00:00 AM",
-      "End_time": "23.59 PM",
-      "color": "#FBBF24 "
-    }
-  ]
-  
+  {
+    "title": "Team Sync",
+    "date": "2025-06-25",
+    "Start_time": "09:00 AM",
+    "End_time": "10:00 AM",
+    "color": "#4ADE80"
+  },
+  {
+    "title": "Backend Deployment",
+    "date": "2025-06-25",
+    "Start_time": "09:30 AM",
+    "End_time": "11:00 AM",
+    "color": "#F87171"
+  },
+  {
+    "title": "UI Testing",
+    "date": "2025-06-25",
+    "Start_time": "11:15 AM",
+    "End_time": "12:00 PM",
+    "color": "#60A5FA"
+  },
+  {
+    "title": "Monthly Planning",
+    "date": "2025-06-27",
+    "Start_time": "01:00 PM",
+    "End_time": "02:30 PM",
+    "color": "#A78BFA"
+  },
+  {
+    "title": "Personal Errands",
+    "date": "2025-06-29",
+    "Start_time": "10:00 AM",
+    "End_time": "11:00 AM",
+    "color": "#FBBF24"
+  },
+  {
+    "title": "Hackathon",
+    "date": "2025-07-02",
+    "Start_time": "12:00 AM",
+    "End_time": "11:59 PM",
+    "color": "#FB923C"
+  },
+  {
+    "title": "Product Demo",
+    "date": "2025-07-03",
+    "Start_time": "02:00 PM",
+    "End_time": "03:00 PM",
+    "color": "#34D399"
+  },
+  {
+    "title": "Interview Session",
+    "date": "2025-07-03",
+    "Start_time": "02:30 PM",
+    "End_time": "04:00 PM",
+    "color": "#60A5FA"
+  },
+  {
+    "title": "Post Demo Analysis",
+    "date": "2025-07-03",
+    "Start_time": "04:30 PM",
+    "End_time": "05:30 PM",
+    "color": "#F87171"
+  }
+]

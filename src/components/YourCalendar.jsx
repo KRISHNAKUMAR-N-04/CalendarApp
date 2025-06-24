@@ -95,7 +95,7 @@ const Calendar = () => {
                     {week.map((cell, idx) => (
                       <div
                         key={idx}
-                        className={`border border-gray-300 p-2 h-15 sm:h-32 md:h-25 overflow-hidden text-sm transition-transform duration-300 hover:-translate-y-1 
+                        className={`border border-gray-300 p-2 h-15 sm:h-32 md:h-25 overflow-y-auto text-sm transition-transform duration-300 hover:-translate-y-1 
                           ${cell.date.isSame(today, 'day') ? 'bg-orange-100 border-orange-500 rounded-md' : ''}`}
                       >
                         <div className="font-bold mb-1">{cell.date.date()}</div>
