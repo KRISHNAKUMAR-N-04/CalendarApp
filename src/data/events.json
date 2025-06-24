@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Team Meeting",
+      "date": "2025-06-24",
+      "Start_time": "10:00 AM",
+      "End_time": "12:00 PM",
+      "color": "#4ADE80 "
+
+    },
+    {
+      "title": "Doctor Appointment",
+      "date": "2025-06-24",
+      "Start_time": "02:00 AM",
+      "End_time": "2:30 PM",
+      "color": "#60A5FA "
+
+    },
+    {
+      "title": "Project Deadline",
+      "date": "2025-06-26",
+      "Start_time": "00:00 AM",
+      "End_time": "23.59 PM",
+      "color": "#FBBF24 "
+    }
+  ]
+  
