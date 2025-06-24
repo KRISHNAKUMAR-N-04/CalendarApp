@@ -1,7 +1,7 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import { CheckIcon, FileWarningIcon } from 'lucide-react';
+import { ArrowBigRight, CheckIcon, FileWarningIcon } from 'lucide-react';
 
 
 const areOverlapping = (a, b) => {
@@ -53,22 +53,22 @@ const EventNotification = ({ events, today }) => {
             </div>
 
             {conflicts.length > 0 ? (
-                <div className="space-y-2  ">
+                <div className="space-y-2 pb-4 ">
                     <div className='ml-3 '>
                         <p className="text-red-700 font-semibold flex mt-10">
                             <FileWarningIcon size={20} className='mr-3 ' />Conflicting Events Found:</p>
                         {conflicts.map(([a, b], idx) => (
                             <div key={idx}>
-                                <p className='text-red-500 italic font-light'>-Your {a.title} Is around the same Time of {b.title}</p>
+                                <p className='text-red-500 italic lg:pb-5 font-light'>-Your {a.title} Is around the same Time of {b.title}</p>
                             </div>
                         ))}
                     </div>
-                    <div className='bg-gray-600 text-white pl-3 pr-3 rounded-lg  drop-shadow-xs '>
+                    <div className='bg-gray-600 text-white pl-3 pr-3 rounded-lg  pb-3 drop-shadow-xs '>
                         <h3 className="text-lg font-bold pt-6">Today's Plan</h3>
 
                         {todayevent.map((event, idx) => (
-                            <div key={idx} className="text-sm mt-1">
-                                <span className="font-medium">{event.title}</span> ({event.Start_time} - {event.End_time})
+                            <div key={idx} className="text-sm mt-1 ml-3 pb-3">
+                                <span className="font-light text-lg flex  "><ArrowBigRight size={15} className='mt-1 mr-3'/>{event.title}</span> ({event.Start_time} - {event.End_time})
                             </div>
                         ))}
                     </div>
@@ -92,7 +92,7 @@ const EventNotification = ({ events, today }) => {
                                     {todayevent.map((event, idx) => (
 
                                         <div key={idx} className="text-sm ">
-                                            <span className="font-medium ">{event.title}</span> ({event.Start_time} - {event.End_time})
+                                            <span className="font-medium pb-3 mt-1 "><ArrowBigRight size={10}/> {event.title}</span> ({event.Start_time} - {event.End_time})
                                         </div>
 
                                     ))}
