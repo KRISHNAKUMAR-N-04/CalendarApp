@@ -45,13 +45,13 @@ const Calendar = () => {
   const calendar = generateCalendar();
 
   return (
-    <div className="lg:ml-64 lg:pb-25 lg:pt-10 max-w-screen lg:min-h-screen">
-      <div className="bg-white/20 backdrop-blur-lg p-4 font-quicksand flex flex-col lg:flex-row shadow-white rounded-lg gap-4 lg:pr-15 max-w-screen">
+    <div className="lg:ml-64 max-w-screen lg:min-h-screen">
+      <div className="bg-white/20 backdrop-blur-lg p-4  font-quicksand flex flex-col lg:flex-row shadow-white rounded-lg gap-4 lg:pr-15 max-w-screen">
         <div className="w-full lg:w-1/3 ml-4 ">
           <EventNotification events={events} today={today} />
         </div>
 
-        <div className="w-full pt-4 pb-5 bg-white/40 rounded-lg px-4 lg:flex-1 max-w-screen lg:max-h-screen ">
+        <div className="w-full bg-white/40 p-4 rounded-lg px-4 lg:flex-1 max-w-screen lg:max-h-screen ">
           <div className='flex h-10 justify-between content-center mb-3'>
             <p className="text-3xl md:text-4xl text-white font-bold mb-4">Calendar</p>
             <div
@@ -82,7 +82,7 @@ const Calendar = () => {
           </div>
 
           <div className="overflow-x-auto mt-4 rounded-lg">
-            <div className="min-w-[900px] min-h-[600px]">
+            <div className="min-w-[900px] ">
               <div className="grid grid-cols-7 bg-blue-900 text-orange-400 text-center font-semibold">
                 {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
                   <div key={d} className="py-2">{d}</div>
@@ -95,7 +95,7 @@ const Calendar = () => {
                     {week.map((cell, idx) => (
                       <div
                         key={idx}
-                        className={`border border-gray-300 p-2 h-15 sm:h-25 md:h-35 overflow-y-auto text-sm transition-transform duration-300 hover:-translate-y-1 
+                        className={`border border-gray-300 p-2 h-15 sm:h-25 md:h-30 overflow-y-auto text-sm transition-transform duration-300 hover:-translate-y-1 
                           ${cell.date.isSame(today, 'day') ? 'bg-orange-100 border-orange-500 rounded-md' : ''}`}
                       >
                         <div className="font-bold mb-1">{cell.date.date()}</div>
