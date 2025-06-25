@@ -45,17 +45,16 @@ const Calendar = () => {
   const calendar = generateCalendar();
 
   return (
-    <div className="lg:ml-64 px-2 py-4 min-h-screen">
-  <div className="bg-white/20 backdrop-blur-lg font-quicksand flex flex-col lg:flex-row shadow-white rounded-lg gap-4">
-    
-    {/* Sidebar Notification */}
+    <div className="lg:ml-64 px-2 py-4   min-h-screen">
+  <div className="bg-white/20 backdrop-blur-lg p-4 font-quicksand flex flex-col lg:flex-row shadow-white rounded-lg gap-4">
+
     <div className="w-full lg:w-1/3">
       <EventNotification events={events} today={today} />
     </div>
 
-    {/* Calendar */}
+
     <div className="w-full bg-white/40 p-4 rounded-lg overflow-x-auto">
-      {/* Top Bar */}
+
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 gap-3">
         <p className="text-2xl sm:text-3xl md:text-4xl text-white font-bold">Calendar</p>
         <div
@@ -67,7 +66,7 @@ const Calendar = () => {
         </div>
       </div>
 
-      {/* Navigation */}
+
       <div className="flex justify-between items-center bg-amber-50 text-black px-4 py-2 rounded-md shadow">
         <button
           className="bg-gray-200 rounded px-4 py-2"
@@ -86,7 +85,7 @@ const Calendar = () => {
         </button>
       </div>
 
-      {/* Calendar Grid */}
+
       <div className="overflow-x-auto mt-4 rounded-lg">
         <div className="min-w-[700px]">
           <div className="grid grid-cols-7 bg-blue-900 text-orange-400 text-center font-semibold">
