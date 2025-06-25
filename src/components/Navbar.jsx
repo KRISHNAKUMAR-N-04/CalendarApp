@@ -37,8 +37,8 @@ const Navbar = () => {
                 to="/"
                 className="flex items-center  w-full"
               >
-                <Calendar size={20} />
-                <p className="font-medium pl-3">Your Calendar</p>
+                <Calendar size={20} className='text-blue-700' />
+                <p className="font-medium pl-3 text-blue-700">Your Calendar</p>
               </Link>
             </li>
             <li className="pl-6 py-3 hover:bg-blue-500 text-gray-600 hover:text-white transition-colors duration-200">
