@@ -43,7 +43,7 @@ const EventNotification = ({ events, today }) => {
     }
 
     return (
-        <div className="bg-amber-50 rounded-md max-h-fit shadow-xl md:max-w-xs pl-4 pr-4 pb-5 ">
+        <div className="bg-amber-50 rounded-md max-h-fit shadow-xl   pl-4 pr-4 pb-5 ">
 
             <div className=' p-5 bg-orange-400 rounded-b-lg  pt-40 shadow-lg' >
                 <p className=' text-blue-900 font-extrabold text-9xl '>{date}</p>

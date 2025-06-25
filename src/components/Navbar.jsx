@@ -8,11 +8,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="lg:hidden flex justify-between items-center bg-white px-4 py-3 shadow fixed w-full z-50">
-        <h1 className="text-xl font-semibold text-gray-800">Calendar</h1>
-        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
+      <div className="lg:hidden flex justify-start items-center bg-white px-4 py-3 shadow  w-full z">
+      <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 mr-4">
           <Menu size={24} />
         </button>
+        <h1 className="text-xl font-semibold text-gray-800">Calendar</h1>
+        
       </div>
 
       <nav

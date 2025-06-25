@@ -3,7 +3,8 @@ import { Bell, UserRoundIcon, Search } from 'lucide-react';
 
 const Topbar = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 md:left-64  z-40 bg-gray-300/40 backdrop-blur-lg shadow h-16 flex items-center px-6 justify-evenly lg:pl-15 lg:pr-15">
+    <div className='lg:block hidden'>
+    <div className="md:fixed  top-0 left-0 right-0 z-20  bg-gray-300/40 backdrop-blur-lg shadow h-16 flex items-center px-6 justify-evenly lg:pl-15 lg:pr-15">
       <div className="flex items-center bg-amber-50  text-white rounded px-3 py-1 w-full max-w-md justify-start">
         <Search size={15} className="text-gray-600" />
         <input
@@ -19,6 +20,8 @@ const Topbar = () => {
         </div>
       </div>
     </div>
+      </div>
+    
   );
 };
 
